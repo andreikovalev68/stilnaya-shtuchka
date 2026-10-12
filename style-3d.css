@@ -36,13 +36,14 @@ h2, h3 { font-family: var(--f-display); font-weight: 700; hyphens: none; overflo
 
 :root { color-scheme: dark; }
 .s-hero__bg::after { background: linear-gradient(180deg, color-mix(in srgb, #141015 55%, transparent), #141015 96%); }
-/* hero-side: фото справа под главной надписью (правило Андрея 12.10.2026) */
-.s-hero__side { display: none; }
+/* hero-side: фото справа под главной надписью, на всех экранах (правило Андрея 12.10.2026) */
+.s-hero__side { display: block; float: right; margin: 6px 0 10px 14px; width: min(170px, 40%); }
+.s-hero__text::after { content: ""; display: block; clear: both; }
+.s-hero__side img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--r); border: 1px solid var(--hair); box-shadow: 0 18px 30px -14px rgba(0,0,0,.45); }
+.s-hero__side figcaption { margin-top: 10px; font-weight: 700; font-size: 1.02rem; color: var(--c-ink); text-align: right; }
 @media (min-width: 901px) {
   .s-hero__text { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 34%); column-gap: 28px; align-content: start; }
   .s-hero__text > .s-eyebrow, .s-hero__text > h1, .s-hero__text > .s-hero__photo { grid-column: 1 / -1; }
   .s-hero__text > .s-lead, .s-hero__text > .s-ticks, .s-hero__text > .s-rating { grid-column: 1; }
-  .s-hero__side { display: block; grid-column: 2; grid-row: 3 / span 3; margin: 18px 0 0; align-self: start; }
-  .s-hero__side img { width: 100%; aspect-ratio: 4 / 5; object-position: 50% 22%; object-fit: cover; border-radius: var(--r); border: 1px solid var(--hair); box-shadow: 0 18px 30px -14px rgba(0,0,0,.45); }
+  .s-hero__side { grid-column: 2; grid-row: 3 / span 3; margin: 18px 0 0; width: auto; float: none; align-self: start; }
 }
-.s-hero__side figcaption { margin-top: 10px; font-family: var(--f-display); font-weight: 700; font-size: 1.05rem; color: var(--c-ink); text-align: right; letter-spacing: .01em; }
