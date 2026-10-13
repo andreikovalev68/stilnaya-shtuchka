@@ -47,3 +47,13 @@ h2, h3 { font-family: var(--f-display); font-weight: 700; hyphens: none; overflo
   .s-hero__text > .s-lead, .s-hero__text > .s-ticks, .s-hero__text > .s-rating { grid-column: 1; }
   .s-hero__side { grid-column: 2; grid-row: 3 / span 3; margin: 18px 0 0; width: auto; float: none; align-self: start; }
 }
+
+/* Услуги с фото */
+.s-svc { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 18px; margin-bottom: 36px; }
+.s-svc__card { background: var(--c-surface); border: 1px solid var(--hair); border-radius: var(--r); overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 18px 30px -18px rgba(0,0,0,.6); }
+.s-svc__ph { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.s-svc__ph img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.s-svc__body { padding: 16px 18px 20px; display: grid; gap: 10px; align-content: start; }
+.s-svc__body h3 { margin: 0; font-size: 1.15rem; }
+.s-svc__price { margin: 0; font: 800 1.35rem/1.1 var(--f-display); color: var(--c-accent-deep); }
+.s-svc__video { justify-self: start; }
