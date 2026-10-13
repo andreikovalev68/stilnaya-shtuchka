@@ -57,3 +57,10 @@ h2, h3 { font-family: var(--f-display); font-weight: 700; hyphens: none; overflo
 .s-svc__body h3 { margin: 0; font-size: 1.15rem; }
 .s-svc__price { margin: 0; font: 800 1.35rem/1.1 var(--f-display); color: var(--c-accent-deep); }
 .s-svc__video { justify-self: start; }
+
+/* Работы салона: плитка с естественными пропорциями */
+.s-works { columns: 3 220px; column-gap: 14px; }
+.s-works__item { margin: 0 0 14px; break-inside: avoid; }
+.s-works__item img, .s-works__item video { display: block; width: 100%; height: auto; border-radius: var(--r); border: 1px solid var(--hair); box-shadow: 0 14px 26px -16px rgba(0,0,0,.6); background: var(--c-surface); }
+.s-works__item figcaption { margin-top: 6px; font-size: .82rem; color: var(--c-ink-soft); }
+@media (max-width: 600px) { .s-works { columns: 2 140px; column-gap: 10px; } .s-works__item { margin-bottom: 10px; } }
